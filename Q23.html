@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Course Selection</legend>
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">--Choose a course--</option>
+                <option value="html">HTML Basics</option>
+                <option value="css">CSS Fundamentals</option>
+                <option value="javascript">JavaScript Essentials</option>
+                <option value="python">Python Programming</option>
+            </select>
+        </fieldset>
+    </form>
+
+    <h2>Available Course Schedules</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML Basics</td>
+                <td>Monday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Mr. Sharma</td>
+            </tr>
+            <tr>
+                <td>CSS Fundamentals</td>
+                <td>Wednesday</td>
+                <td>2:00 PM - 4:00 PM</td>
+                <td>Ms. Gupta</td>
+            </tr>
+            <tr>
+                <td>JavaScript Essentials</td>
+                <td>Friday</td>
+                <td>11:00 AM - 1:00 PM</td>
+                <td>Mr. Verma</td>
+            </tr>
+            <tr>
+                <td>Python Programming</td>
+                <td>Saturday</td>
+                <td>3:00 PM - 5:00 PM</td>
+                <td>Ms. Singh</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
