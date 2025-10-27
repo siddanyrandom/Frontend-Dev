@@ -1,0 +1,99 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f0f4f8;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #1e90ff;
+  color: white;
+  padding: 1.5em 0;
+}
+
+/* Center Form */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background: white;
+  padding: 2em 2.5em;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.4em;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.4);
+}
+
+/* Button Styling */
+button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 0.9em;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #006cd9;
+}
+
+/* Footer */
+footer {
+  background-color: #1e90ff;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.5em;
+  }
+}

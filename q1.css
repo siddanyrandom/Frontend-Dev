@@ -1,0 +1,92 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fixed header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e2a38;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  z-index: 1000;
+}
+
+/* Navigation links */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  color: #ffd166;
+}
+
+/* Main section */
+main {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+  padding-top: 15vh; /* to offset fixed header */
+  padding-bottom: 10vh;
+}
+
+/* Bio section */
+.bio {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.bio img {
+  border-radius: 50%;
+  width: 150px; /* px unit */
+  height: 150px;
+  margin-bottom: 1.5em; /* em unit */
+}
+
+.bio p {
+  font-size: 1.1rem; /* rem unit */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Footer always at bottom */
+footer {
+  background-color: #1e2a38;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Body layout for full-height flex positioning */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}

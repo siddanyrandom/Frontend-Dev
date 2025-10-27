@@ -1,0 +1,137 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 2em 1em;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3em;
+}
+
+header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Pricing Container */
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2em;
+  padding: 3em 5%;
+  flex-wrap: wrap;
+}
+
+/* Plan Cards */
+.plan {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  padding: 2em;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  background-color: #f0f8ff;
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.3);
+}
+
+.plan h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1em;
+}
+
+.plan ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+
+.plan li {
+  margin: 0.6em 0;
+  font-size: 0.95rem;
+}
+
+/* Price Section */
+.price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1.2em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.8em 1.5em;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Highlighted Plan */
+.popular {
+  border: 3px solid #ffb400;
+  background-color: #fffaf0;
+  box-shadow: 0 4px 12px rgba(255, 180, 0, 0.3);
+}
+
+.highlight {
+  background-color: #ffb400;
+}
+
+.highlight:hover {
+  background-color: #e69a00;
+}
+
+/* Footer */
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

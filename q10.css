@@ -1,0 +1,217 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #f7f9fc;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, rgba(30,144,255,1), rgba(72,61,139,1));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  z-index: 1000;
+  border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffe082;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://cdn.pixabay.com/photo/2016/11/19/14/00/laptop-1839876_1280.jpg") no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4em 2em;
+  background: white;
+}
+
+.about-text {
+  flex: 1;
+  padding: 1.5em;
+}
+
+.about-text h2 {
+  color: #1e90ff;
+  margin-bottom: 0.5em;
+}
+
+.about-image {
+  flex: 1;
+  padding: 1.5em;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 3px solid #1e90ff;
+  outline: 3px solid rgba(30,144,255,0.3);
+}
+
+/* Services Section */
+.services {
+  background: linear-gradient(180deg, rgba(30,144,255,0.1), rgba(255,255,255,1));
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.services h2 {
+  color: #1e90ff;
+  margin-bottom: 1.5em;
+}
+
+.service-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+
+.service-card {
+  background: white;
+  border: 2px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 1.5em;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, background 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  background: rgba(30,144,255,0.05);
+}
+
+.highlight {
+  border-color: #1e90ff;
+  background: rgba(30,144,255,0.08);
+}
+
+/* Contact Section */
+.contact {
+  padding: 4em 2em;
+  background: white;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 1.5em;
+  color: #1e90ff;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input, textarea {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  background: #1e90ff;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #155fa0;
+}
+
+/* Footer */
+.footer {
+  background: #1e90ff;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .service-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}

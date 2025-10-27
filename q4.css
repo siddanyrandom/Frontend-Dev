@@ -1,0 +1,84 @@
+/* General Styles */
+body {
+  font-family: "Georgia", serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+header h1 {
+  margin-bottom: 0.3em;
+  font-size: 2.2rem;
+}
+
+header h3 {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+
+/* Article Styling */
+main {
+  max-width: 800px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+p {
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+/* Pseudo-elements for paragraph styling */
+p::first-letter {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a90e2;
+}
+
+p::first-line {
+  font-weight: bold;
+}
+
+/* Highlight styling */
+mark {
+  background-color: #ffef96;
+  padding: 0 0.2em;
+  border-radius: 4px;
+}
+
+/* Blockquote Styling */
+blockquote {
+  border-left: 5px solid #4a90e2;
+  background-color: #eef4fb;
+  padding: 1em 1.5em;
+  font-style: italic;
+  margin: 2em 0;
+  color: #555;
+}
+
+cite {
+  display: block;
+  text-align: right;
+  margin-top: 0.5em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
