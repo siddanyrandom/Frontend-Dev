@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding for proper rendering of text -->
+  <meta charset="UTF-8">
+
+  <!-- Short description for search engines -->
+  <meta name="description" content="Demo of important head elements">
+
+  <!-- Author of the document -->
+  <meta name="author" content="Siddhartha Saxena Kanojia">
+
+  <!-- Base URL for resolving relative URLs (set to current folder) -->
+  <base href="./">
+
+  <!-- Page title shown in the browser tab -->
+  <title>Head Elements Demo</title>
+
+  <!-- Favicon provided as an inline SVG data URL so no external fetch is needed -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23007acc'/%3E%3Ctext x='8' y='11' font-size='10' text-anchor='middle' fill='white' font-family='Arial, sans-serif'%3EHE%3C/text%3E%3C/svg%3E" type="image/svg+xml">
+
+  <!-- Internal CSS (example content) -->
+  <style>
+    /* Simple styles so the page looks readable */
+    body { font-family: Arial, sans-serif; margin: 1.5rem; line-height: 1.5; }
+    header { margin-bottom: 1rem; }
+  </style>
+
+  <!-- Inline JavaScript (example content) -->
+  <script>
+    // Simple script to confirm the document loaded
+    console.log('Head elements demo loaded');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Head Elements Demo</h1>
+  </header>
+
+  <p>This page demonstrates the essential elements commonly placed inside the <code>&lt;head&gt;</code> section:</p>
+  <ul>
+    <li><strong>&lt;meta charset="UTF-8"&gt;</strong> — character encoding</li>
+    <li><strong>&lt;meta name="description"&gt;</strong> — page description</li>
+    <li><strong>&lt;meta name="author"&gt;</strong> — author info</li>
+    <li><strong>&lt;base&gt;</strong> — base URL for resolving relative links</li>
+    <li><strong>&lt;link rel="icon"&gt;</strong> — favicon</li>
+    <li><strong>&lt;style&gt;</strong> — internal CSS</li>
+    <li><strong>&lt;script&gt;</strong> — inline JavaScript</li>
+  </ul>
+
+  <p>If this file still appears blank or "not working" when you open it, try these checks:</p>
+  <ol>
+    <li>Ensure you saved the file with a <code>.html</code> extension and opened it in a browser (double-click or drag into the browser).</li>
+    <li>Open the browser console (F12) — you should see the <code>console.log</code> message.</li>
+    <li>If you used a web server, ensure no server errors are preventing the file from loading.</li>
+  </ol>
+</body>
+</html>

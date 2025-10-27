@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Iframe Result</title>
+</head>
+<body>
+  <h2>Submit the Form</h2>
+  <form action="#result" method="get" target="resultFrame" onsubmit="showMessage(); return false;">
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" name="name" required>
+    <input type="submit" value="Submit">
+  </form>
+
+  <h3>Result:</h3>
+  <iframe name="resultFrame" id="resultFrame" width="400" height="100" style="border:1px solid black;"></iframe>
+
+  <script>
+    function showMessage() {
+      const iframe = document.getElementById("resultFrame").contentWindow.document;
+      iframe.open();
+      iframe.write("<h3>Form successfully submitted.</h3>");
+      iframe.close();
+    }
+  </script>
+</body>
+</html>
