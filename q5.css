@@ -1,0 +1,132 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.pricing-section h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+/* Container using Flexbox */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Pricing Card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Featured Card */
+.featured {
+    background-color: #38bdf8;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Price Text */
+.price {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.price span {
+    font-size: 1rem;
+    color: inherit;
+}
+
+/* Features List */
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+/* Button */
+button {
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #111827;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 750px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured {
+        transform: none;
+    }
+}
