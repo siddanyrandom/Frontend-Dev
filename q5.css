@@ -1,0 +1,138 @@
+/* ===== General Page Styling ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+header, footer {
+  background-color: #004aad;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+/* ===========================================================
+   1️⃣ ATTRIBUTE SELECTORS
+   =========================================================== */
+
+/* Selects input elements with type="text" */
+input[type="text"] {
+  border: 2px solid #007bff;
+  padding: 8px;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Selects links that start with "https" */
+a[href^="https"] {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* ===========================================================
+   2️⃣ PSEUDO-CLASSES & PSEUDO-ELEMENTS
+   =========================================================== */
+
+/* Change color when hovered */
+a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+
+/* Change border color when input is focused */
+input:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+/* Select every even child (2nd, 4th, etc.) */
+.pseudo-list li:nth-child(even) {
+  background-color: #e0ebff;
+}
+
+/* Add decorative text before and after each list item */
+.pseudo-list li::before {
+  content: "👉 ";
+  color: #004aad;
+}
+.pseudo-list li::after {
+  content: " ✅";
+  color: #28a745;
+}
+
+/* Hover & Focus for button */
+.hover-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hover-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.hover-btn:focus {
+  outline: 2px solid #ff6600;
+}
+
+/* ===========================================================
+   3️⃣ COMBINATORS
+   =========================================================== */
+
+/* Descendant selector - affects all <p> inside .parent */
+.parent p {
+  color: #444;
+}
+
+/* Child combinator (>) - affects only direct child <p> */
+.parent > p {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Adjacent sibling combinator (+) - affects next <p> after .sibling-demo */
+.sibling-demo + p {
+  color: #28a745;
+  font-style: italic;
+}
+
+/* General sibling combinator (~) - affects all <p> after .sibling-demo */
+.sibling-demo ~ p {
+  text-decoration: underline;
+}
+
+/* ===========================================================
+   Layout & Styling Helpers
+   =========================================================== */
+h2 {
+  margin-top: 2rem;
+  color: #004aad;
+  border-bottom: 2px solid #004aad;
+  padding-bottom: 4px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 6px 0;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  background-color: #eaeaea;
+  color: #555;
+}

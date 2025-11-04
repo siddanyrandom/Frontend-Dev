@@ -1,0 +1,77 @@
+/* ===== General Page Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* ===== Header and Footer (Fixed) ===== */
+header, footer {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+header {
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.9rem;
+}
+
+/* ===== Main Content Spacing ===== */
+main {
+  margin-top: 80px;  /* space for fixed header */
+  margin-bottom: 60px; /* space for fixed footer */
+}
+
+/* ===== Section Styling ===== */
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Linear Gradient Section */
+.linear-gradient-section {
+  background: linear-gradient(135deg, #007bff, #00c9a7, #ffb347);
+  background-size: cover;
+  color: #fff;
+}
+
+/* Radial Gradient Section (with fixed background for parallax-like effect) */
+.radial-gradient-section {
+  background: radial-gradient(circle at center, #ff6f61, #8e44ad, #2c3e50);
+  background-attachment: fixed; /* Parallax-like effect */
+  color: #fff;
+}
+
+/* ===== Text Box Styling ===== */
+.content {
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+/* ===== Hover Subtle Effect ===== */
+.content:hover {
+  transform: scale(1.03);
+  transition: all 0.4s ease;
+}

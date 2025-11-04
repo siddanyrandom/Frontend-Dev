@@ -1,0 +1,101 @@
+/* ===== General Page Styling ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===== Box Model Demonstration ===== */
+.box-demo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.box-model {
+  background-color: #b3d9ff; /* margin visible area */
+  padding: 30px;
+  border: 10px solid #0074d9;
+  outline: 2px dashed #000;
+  box-sizing: content-box; /* default */
+}
+
+.box-model .content {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #004aad;
+}
+
+/* Border-box version */
+.border-box {
+  background-color: #ffcfb3;
+  box-sizing: border-box;
+  width: 250px;
+  height: 150px;
+}
+
+/* Add hover effect to show clarity */
+.box-model:hover {
+  border-color: #e63946;
+  transition: border-color 0.3s ease;
+}
+
+/* ===== Description Section ===== */
+.description {
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.description h2 {
+  color: #004aad;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description p, .description li {
+  font-size: 1rem;
+  color: #444;
+}
+
+.description ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 700px) {
+  .box-demo-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .box-model {
+    width: 80%;
+  }
+}

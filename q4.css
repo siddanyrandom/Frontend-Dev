@@ -1,0 +1,92 @@
+/* ===== General Page Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header & Footer ===== */
+header {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1.2rem 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+footer {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===== Card Container ===== */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 3rem 1rem;
+  flex: 1;
+}
+
+/* ===== Card Base Style ===== */
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 280px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* ===== Different Shadow Levels ===== */
+.shadow-light {
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-medium {
+  box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-strong {
+  box-shadow: 6px 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Hover Lift Effect ===== */
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Hover shadow becomes deeper */
+.shadow-light:hover {
+  box-shadow: 4px 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-medium:hover {
+  box-shadow: 6px 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.shadow-strong:hover {
+  box-shadow: 8px 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Headings with Text Shadows ===== */
+h2 {
+  color: #004aad;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}

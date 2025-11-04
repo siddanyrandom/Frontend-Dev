@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model Exploration</title>
+  <link rel="stylesheet" href="q8.css" />
+</head>
+<body>
+  <header>
+    <h1>CSS Box Model Exploration</h1>
+  </header>
+
+  <main>
+    <section class="box-demo-section">
+      <div class="box-model">
+        <div class="content">Content Area</div>
+      </div>
+
+      <div class="box-model border-box">
+        <div class="content">Border-Box Example</div>
+      </div>
+    </section>
+
+    <section class="description">
+      <h2>Understanding the CSS Box Model</h2>
+      <p>
+        Every HTML element can be considered as a box. The <strong>box model</strong> defines how 
+        the size of that box is calculated — including <em>content</em>, <mark>padding</mark>, 
+        <strong>border</strong>, and <em>margin</em>.
+      </p>
+
+      <ul>
+        <li><strong>Content:</strong> The actual text or image inside the box.</li>
+        <li><strong>Padding:</strong> Clears an area around the content — inside the border.</li>
+        <li><strong>Border:</strong> Wraps the padding and content.</li>
+        <li><strong>Margin:</strong> Clears an area outside the border — separates boxes.</li>
+      </ul>
+
+      <p>
+        By default, the total width and height of an element include only the content area.
+        Setting <code>box-sizing: border-box;</code> makes the element include padding and
+        border within its defined size, simplifying layout control.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Box Model Demonstration</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* ===== General Page Styling ===== */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Container (Flexbox Centering) ===== */
+.container {
+  flex: 1; /* takes remaining height */
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* ===== Box Styling ===== */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Box 1: fixed dimensions (px) */
+.box1 {
+  width: 200px;
+  height: 150px;
+  background-color: #007bff;
+}
+
+/* Box 2: percentage width, min-height, max-width, and overflow */
+.box2 {
+  width: 40%;
+  min-height: 100px;
+  max-width: 400px;
+  background-color: #28a745;
+  overflow: auto; /* scroll if content exceeds box */
+}
+
+/* Box 3: viewport and em units */
+.box3 {
+  width: 25vw; /* 25% of viewport width */
+  height: 15vh; /* 15% of viewport height */
+  font-size: 1.2em;
+  background-color: #ff6f61;
+}
+
+/* Add subtle hover for clarity */
+.box:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
