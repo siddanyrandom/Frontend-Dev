@@ -1,0 +1,82 @@
+/* ===== General Page Styling ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Tooltip Container ===== */
+.tooltip-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ===== Tooltip Styling ===== */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Tooltip text hidden by default */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 180px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 125%; /* Show tooltip above the element */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ===== Footer ===== */
+footer p {
+    font-size: 0.9rem;
+}

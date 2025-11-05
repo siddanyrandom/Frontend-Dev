@@ -1,0 +1,77 @@
+/* ===== General Page Styling ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* ===== Element Selector ===== */
+/* Targets all paragraph elements */
+p {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* ===== Class Selector ===== */
+/* Applies to elements with class="highlight" */
+.highlight {
+    background-color: #fffae6;
+    border-left: 4px solid #f0c000;
+    padding: 0.5rem;
+}
+
+/* ===== ID Selector ===== */
+/* Targets element with id="unique" */
+#unique {
+    background-color: #d9fdd3;
+    border: 2px dashed #4caf50;
+    padding: 0.5rem;
+}
+
+/* ===== Attribute Selector ===== */
+/* Styles links starting with https */
+a[href^="https"] {
+    color: #0077cc;
+}
+
+/* Styles inputs of type="text" */
+input[type="text"] {
+    border: 2px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* ===== Combinator Selectors ===== */
+/* Child selector: targets <p> that are direct children of .combinator */
+.combinator > p {
+    color: #e67e22;
+}
+
+/* Adjacent sibling: targets the first <p> immediately after .combinator */
+.combinator + p {
+    color: #8e44ad;
+    font-style: italic;
+}
+
+/* General sibling: targets all elements after .combinator */
+.combinator ~ span {
+    color: #2c3e50;
+}
+
+/* ===== Footer ===== */
+footer p {
+    font-size: 0.9rem;
+}

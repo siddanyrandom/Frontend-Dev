@@ -1,0 +1,74 @@
+/* ===== General Styling ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #e0f7fa, #e8eaf6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 900px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.desc {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* ===== Box Comparison Section ===== */
+.boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* ===== Common Box Styles ===== */
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #333;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Box 1 - Default Box Sizing ===== */
+.default-box {
+    background-color: #ff8a80;
+    box-sizing: content-box; /* Default */
+}
+
+/* ===== Box 2 - Border Box Sizing ===== */
+.border-box {
+    background-color: #4db6ac;
+    box-sizing: border-box;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 700px) {
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 – CSS Selectors Practice Page</title>
+    <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+        <p>Demonstrating element, class, ID, attribute, and combinator selectors.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Element Selectors</h2>
+            <p>This paragraph is styled using an <strong>element selector</strong>.</p>
+            <p>Element selectors target HTML tags directly like <code>p</code>, <code>h1</code>, etc.</p>
+        </section>
+
+        <section>
+            <h2>Class Selectors</h2>
+            <p class="highlight">This paragraph uses a class selector.</p>
+            <p class="highlight">Multiple elements can share the same class.</p>
+        </section>
+
+        <section>
+            <h2>ID Selectors</h2>
+            <p id="unique">This one uses an ID selector — which should be unique in a page.</p>
+        </section>
+
+        <section>
+            <h2>Attribute Selectors</h2>
+            <a href="https://example.com" target="_blank">External Link</a><br>
+            <a href="#local">Local Link</a><br>
+            <input type="text" placeholder="Type here">
+        </section>
+
+        <section>
+            <h2>Combinator Selectors</h2>
+            <div class="combinator">
+                <p>Child selector example (div > p)</p>
+                <p>Adjacent sibling selector example (+)</p>
+                <span>General sibling selector (~)</span>
+            </div>
+            <p>This paragraph follows the div to show sibling selectors.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for Q4 – CSS Selectors Practice Page</p>
+    </footer>
+</body>
+</html>
