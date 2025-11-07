@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles Summary</title>
+    <link rel="stylesheet" href="responsive-design-principles-summary.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Design Principles Summary</h1>
+    </header>
+
+    <main class="principles-grid">
+        <section class="principle">
+            <h2>Fluid Layouts</h2>
+            <p>Fluid layouts use relative units like percentages instead of fixed pixels, allowing elements to resize smoothly with the viewport.</p>
+            <code>
+                .container {<br>
+                &nbsp;&nbsp;width: 90%;<br>
+                &nbsp;&nbsp;margin: auto;<br>
+                }
+            </code>
+        </section>
+
+        <section class="principle">
+            <h2>Flexible Media</h2>
+            <p>Flexible images and videos adjust their size according to the container, ensuring they never overflow or distort.</p>
+            <code>
+                img {<br>
+                &nbsp;&nbsp;max-width: 100%;<br>
+                &nbsp;&nbsp;height: auto;<br>
+                }
+            </code>
+        </section>
+
+        <section class="principle">
+            <h2>Breakpoints</h2>
+            <p>Breakpoints use media queries to apply different CSS rules at specific screen widths for adaptive layouts.</p>
+            <code>
+                @media (max-width: 600px) {<br>
+                &nbsp;&nbsp;.grid { grid-template-columns: 1fr; }<br>
+                }
+            </code>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Responsive Design Principles Example</p>
+    </footer>
+</body>
+</html>

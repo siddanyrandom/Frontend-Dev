@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Responsive Web Demo</title>
+    <link rel="stylesheet" href="combined-responsive-web-demo.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">WebDemo</div>
+        <nav>
+            <ul>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#cheatsheet">Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Grid Section -->
+    <main class="main-grid">
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="gallery fade-in">
+            <h2>Responsive Image Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://picsum.photos/300/200?random=1" alt="Gallery 1">
+                <img src="https://picsum.photos/300/200?random=2" alt="Gallery 2">
+                <img src="https://picsum.photos/300/200?random=3" alt="Gallery 3">
+                <img src="https://picsum.photos/300/200?random=4" alt="Gallery 4">
+                <img src="https://picsum.photos/300/200?random=5" alt="Gallery 5">
+                <img src="https://picsum.photos/300/200?random=6" alt="Gallery 6">
+            </div>
+        </section>
+
+        <!-- About Responsive Design -->
+        <section id="about" class="about fade-in">
+            <h2>What is Responsive Design?</h2>
+            <p>
+                Responsive web design ensures that web pages look and function well on all devices —
+                from large desktop monitors to small mobile screens. It uses flexible layouts, fluid images,
+                and CSS media queries to adapt dynamically to different screen sizes.
+            </p>
+            <p>
+                Example: <code>@media (max-width: 700px) { grid-template-columns: 1fr; }</code>
+            </p>
+        </section>
+
+        <!-- Cheat Sheet Preview -->
+        <section id="cheatsheet" class="cheatsheet fade-in">
+            <h2>Responsive CSS Cheat Sheet</h2>
+            <div class="cheat-grid">
+                <div class="card">
+                    <h3>Filters</h3>
+                    <p>Apply visual effects like <code>blur()</code> or <code>grayscale()</code>.</p>
+                </div>
+                <div class="card">
+                    <h3>Media Queries</h3>
+                    <p>Adjust styles based on device width using <code>@media</code>.</p>
+                </div>
+                <div class="card">
+                    <h3>Typography</h3>
+                    <p>Use <code>clamp()</code> for fluid font sizing.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: <a href="mailto:info@webdemo.com">info@webdemo.com</a> | &copy; 2025 WebDemo</p>
+    </footer>
+</body>
+</html>

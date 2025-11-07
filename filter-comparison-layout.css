@@ -1,0 +1,83 @@
+/* ---------- General Page Styles ---------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+}
+
+/* ---------- Main Layout ---------- */
+.comparison-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    animation: fadeIn 1s ease-in;
+}
+
+/* ---------- Image Boxes ---------- */
+.image-box {
+    text-align: center;
+    max-width: 500px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: filter 0.4s ease;
+}
+
+/* ---------- Filter Effect ---------- */
+.filtered img {
+    filter: brightness(60%) contrast(130%);
+}
+
+.filtered img:hover {
+    filter: none;
+}
+
+/* ---------- Captions ---------- */
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ---------- Animation ---------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive Layout ---------- */
+@media (max-width: 700px) {
+    .comparison-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    figcaption {
+        font-size: 1.1rem;
+    }
+}

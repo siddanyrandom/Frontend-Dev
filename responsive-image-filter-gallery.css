@@ -1,0 +1,70 @@
+/* ---------- General Styles ---------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+}
+
+h1 {
+    margin: 0.5rem 0;
+}
+
+/* ---------- Gallery Grid ---------- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* ---------- Image and Filter Styles ---------- */
+figure {
+    margin: 0;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    transition: filter 0.5s ease;
+}
+
+/* Apply different filters */
+figure:nth-child(1) img { filter: blur(3px); }
+figure:nth-child(2) img { filter: grayscale(100%); }
+figure:nth-child(3) img { filter: sepia(80%); }
+figure:nth-child(4) img { filter: brightness(0.7); }
+figure:nth-child(5) img { filter: contrast(150%); }
+figure:nth-child(6) img { filter: hue-rotate(90deg); }
+
+/* Remove filter on hover */
+img:hover {
+    filter: none;
+}
+
+/* ---------- Captions ---------- */
+figcaption {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
