@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Pagination</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="blog-pagination.css">
+</head>
+<body>
+
+  <header class="bg-primary text-white text-center py-4">
+    <h1 class="fw-bold">My Tech Blog</h1>
+    <p class="lead mb-0">Exploring code, design, and development</p>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4 mb-5">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="https://picsum.photos/id/1015/600/300" class="card-img-top" alt="Post 1">
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-semibold">Building Responsive Layouts</h5>
+            <p class="card-text">A step-by-step guide to creating mobile-friendly layouts using Bootstrap grid system.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="https://picsum.photos/id/1025/600/300" class="card-img-top" alt="Post 2">
+          <div class="card-body">
+            <h5 class="card-title text-primary fw-semibold">Mastering CSS Transitions</h5>
+            <p class="card-text">Learn how to add smooth animations and transitions to your website effortlessly.</p>
+            <a href="#" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Pager -->
+    <div class="d-flex justify-content-between mt-4">
+      <button class="btn btn-outline-secondary">&larr; Older Posts</button>
+      <button class="btn btn-outline-secondary">Newer Posts &rarr;</button>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 My Tech Blog | All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

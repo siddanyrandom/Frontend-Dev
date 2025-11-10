@@ -1,0 +1,32 @@
+:root {
+  --bs-primary: #ff6f61; /* custom coral theme */
+  --bs-font-sans-serif: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--bs-font-sans-serif);
+  background-color: #f8f9fa;
+}
+
+h1, h5 {
+  font-weight: 600;
+}
+
+.card {
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--bs-primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e65c53;
+}
