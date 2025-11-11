@@ -1,0 +1,18 @@
+const readline = require("readline-sync");
+
+let age = Number(readline.question("Enter your age: "));
+let isCitizenInput = readline.question("Are you a citizen? (yes/no): ").toLowerCase();
+
+let isCitizen = (isCitizenInput === "yes");
+
+if (isCitizen && age >= 18) {
+  if (age >= 21) {
+    console.log("Eligible for all services.");
+  } else {
+    console.log("Eligible to vote only.");
+  }
+} else if (!isCitizen && age >= 18) {
+  console.log("Only age criteria met.");
+} else {
+  console.log("Not eligible yet.");
+}
