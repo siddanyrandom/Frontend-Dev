@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+    <style>
+        input { display: block; margin: 10px 0; padding: 8px; width: 250px; }
+        .error { color: red; font-size: 12px; }
+        .valid { border: 2px solid green; }
+        .invalid { border: 2px solid red; }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    <input type="text" id="name" placeholder="Name">
+    <div id="nameError" class="error"></div>
+
+    <input type="text" id="email" placeholder="Email">
+    <div id="emailError" class="error"></div>
+
+    <input type="text" id="phone" placeholder="Phone">
+    <div id="phoneError" class="error"></div>
+
+    <input type="password" id="password" placeholder="Password">
+    <div id="passwordError" class="error"></div>
+
+    <button onclick="validateForm()">Submit</button>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const password = document.getElementById("password");
+
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const phoneError = document.getElementById("phoneError");
+            const passwordError = document.getElementById("passwordError");
+
+            const nameReg = /^[A-Za-z ]+$/;
+            const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneReg = /^[0-9]{10}$/;
+            const passwordReg = /^(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&+=!]).+$/;
+
+            validateField(name, nameReg, nameError, "Name must contain alphabets only");
+            validateField(email, emailReg, emailError, "Invalid email format");
+            validateField(phone, phoneReg, phoneError, "Phone must be 10 digits");
+            validateField(password, passwordReg, passwordError, "Password must contain 1 uppercase, 1 number, 1 special character");
+        }
+
+        function validateField(field, regex, errorField, msg) {
+            if (regex.test(field.value)) {
+                field.classList.remove("invalid");
+                field.classList.add("valid");
+                errorField.textContent = "";
+            } else {
+                field.classList.remove("valid");
+                field.classList.add("invalid");
+                errorField.textContent = msg;
+            }
+        }
+    </script>
+</body>
+</html>

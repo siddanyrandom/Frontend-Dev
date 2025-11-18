@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Form Builder</title>
+</head>
+<body>
+    <h2>Dynamic Form Builder</h2>
+
+    <div id="formContainer"></div>
+    <button onclick="submitForm()">Submit</button>
+
+    <script>
+        class FormBuilder {
+            constructor(fields) {
+                this.fields = fields;
+            }
+
+            renderForm(containerId) {
+                const container = document.getElementById(containerId);
+                let html = "";
+                this.fields.forEach(field => {
+                    html += `<label>${field.label}</label>
+                             <input type="${field.type}" id="${field.label.replace(/\s+/g,'_')}"><br>`;
+                });
+                container.innerHTML = html;
+            }
+
+            getFormData() {
+                const data = {};
+                this.fields.forEach(field => {
+                    const id = field.label.replace(/\s+/g, "_");
+                    data[field.label] = document.getElementById(id).value;
+                });
+                return data;
+            }
+        }
+
+        const fields = [
+            { type: "text", label: "Username" },
+            { type: "email", label: "Email" },
+            { type: "password", label: "Password" }
+        ];
+
+        const form = new FormBuilder(fields);
+        form.renderForm("formContainer");
+
+        function submitForm() {
+            console.log(form.getFormData());
+            alert(JSON.stringify(form.getFormData(), null, 2));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+    <style>
+        input { display: block; margin: 10px 0; padding: 8px; width: 250px; }
+        .error { color: red; font-size: 12px; }
+        .success { color: green; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <div id="userError" class="error"></div>
+
+    <input type="password" id="password" placeholder="Password">
+    <div id="passError" class="error"></div>
+
+    <button onclick="validateLogin()">Login</button>
+
+    <h3 id="message"></h3>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            const userReg = /^.{5,}$/;
+            const passReg = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@#$%^&+=!]).{8,}$/;
+
+            const userError = document.getElementById("userError");
+            const passError = document.getElementById("passError");
+            const message = document.getElementById("message");
+
+            let valid = true;
+
+            if (!userReg.test(username)) {
+                userError.textContent = "Username must be at least 5 characters";
+                valid = false;
+            } else userError.textContent = "";
+
+            if (!passReg.test(password)) {
+                passError.textContent = "Password must be 8+ chars with uppercase, lowercase, number, special char";
+                valid = false;
+            } else passError.textContent = "";
+
+            if (valid) {
+                message.textContent = "Login Successful!";
+                message.className = "success";
+            } else {
+                message.textContent = "";
+            }
+        }
+    </script>
+</body>
+</html>

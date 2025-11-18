@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <style>
+        input { display: block; margin: 10px 0; padding: 8px; width: 250px; }
+        .error { color: red; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h2>Movie Ticket Booking</h2>
+
+    <input type="text" id="name" placeholder="Name">
+    <div id="nameError" class="error"></div>
+
+    <input type="text" id="email" placeholder="Email">
+    <div id="emailError" class="error"></div>
+
+    <input type="number" id="seats" placeholder="Seats (1–10)">
+    <div id="seatError" class="error"></div>
+
+    <button onclick="bookTicket()">Book Ticket</button>
+
+    <h3 id="ticketOutput"></h3>
+
+    <script>
+        function bookTicket() {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const seats = document.getElementById("seats").value.trim();
+
+            const nameReg = /^[A-Za-z ]+$/;
+            const emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const seatReg = /^(10|[1-9])$/;
+
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const seatError = document.getElementById("seatError");
+
+            let valid = true;
+
+            if (!nameReg.test(name)) { nameError.textContent = "Name must contain alphabets only"; valid = false; }
+            else nameError.textContent = "";
+
+            if (!emailReg.test(email)) { emailError.textContent = "Invalid email format"; valid = false; }
+            else emailError.textContent = "";
+
+            if (!seatReg.test(seats)) { seatError.textContent = "Seats must be between 1 and 10"; valid = false; }
+            else seatError.textContent = "";
+
+            if (!valid) return;
+
+            const booking = { name, email, seats };
+            document.getElementById("ticketOutput").textContent =
+                `Ticket Booked: ${booking.name}, ${booking.email}, Seats: ${booking.seats}`;
+        }
+    </script>
+</body>
+</html>
