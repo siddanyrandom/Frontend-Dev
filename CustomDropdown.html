@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Dropdown</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 30px; }
+    .dropdown { position: relative; width: 200px; }
+    .dropdown-btn { width: 100%; padding: 10px; border: 1px solid #333; cursor: pointer; border-radius: 6px; }
+    .options { position: absolute; top: 45px; width: 100%; border: 1px solid #333; border-radius: 6px; background: white; display: none; }
+    .option { padding: 10px; cursor: pointer; }
+    .option:hover { background: #f1f1f1; }
+  </style>
+</head>
+<body>
+  <h2>Custom Dropdown</h2>
+
+  <div class="dropdown" id="dropdown">
+    <div class="dropdown-btn" id="dropdownBtn">Select Option</div>
+    <div class="options" id="options">
+      <div class="option">Option 1</div>
+      <div class="option">Option 2</div>
+      <div class="option">Option 3</div>
+    </div>
+  </div>
+
+  <script>
+    const dropdown = document.getElementById('dropdown');
+    const dropdownBtn = document.getElementById('dropdownBtn');
+    const options = document.getElementById('options');
+
+    dropdownBtn.addEventListener('click', () => {
+      const isOpen = options.style.display === 'block';
+      options.style.display = isOpen ? 'none' : 'block';
+    });
+
+    options.addEventListener('click', (e) => {
+      if (e.target.classList.contains('option')) {
+        dropdownBtn.textContent = e.target.textContent;
+        options.style.display = 'none';
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        options.style.display = 'none';
+      }
+    }, true);
+  </script>
+</body>
+</html>

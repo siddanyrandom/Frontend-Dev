@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dynamic Product List Manager</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #product-list li { padding: 6px 0; display: flex; gap: 8px; align-items: center; }
+    #product-list li span { flex: 1; }
+    input.edit-input { flex: 1; padding: 4px; }
+    button { padding: 4px 8px; }
+  </style>
+</head>
+<body>
+  <h2>Dynamic Product List Manager</h2>
+
+  <input id="product-input" type="text" placeholder="Enter product name">
+  <button id="add-btn">Add</button>
+
+  <ul id="product-list"></ul>
+
+<script>
+const input = document.getElementById('product-input');
+const addBtn = document.getElementById('add-btn');
+const list = document.getElementById('product-list');
+
+addBtn.addEventListener('click', () => {
+  const name = input.value.trim();
+  if (name === '') return;
+  addProduct(name);
+  input.value = '';
+});
+
+function addProduct(name) {
+  const li = document.createElement('li');
+  li.innerHTML = `
+    <span class="product-name">${name}</span>
+    <button class="edit-btn">Edit</button>
+    <button class="delete-btn">Delete</button>
+  `;
+  list.appendChild(li);
+}
+
+list.addEventListener('click', (e) => {
+  const target = e.target;
+  if (target.classList.contains('delete-btn')) {
+    target.parentElement.remove();
+  }
+  if (target.classList.contains('edit-btn')) {
+    const li = target.parentElement;
+    enableEditMode(li);
+  }
+});
+
+function enableEditMode(li) {
+  const nameSpan = li.querySelector('.product-name');
+  const currentName = nameSpan.textContent;
+
+  const inputEl = document.createElement('input');
+  inputEl.type = 'text';
+  inputEl.className = 'edit-input';
+  inputEl.value = currentName;
+
+  li.replaceChild(inputEl, nameSpan);
+  inputEl.focus();
+
+  function autoSave(e) {
+    if (e.target !== inputEl) {
+      saveEdit(li, inputEl);
+      document.removeEventListener('click', autoSave);
+    }
+  }
+
+  setTimeout(() => {
+    document.addEventListener('click', autoSave);
+  }, 0);
+}
+
+function saveEdit(li, inputEl) {
+  const newName = inputEl.value.trim() || 'Unnamed Product';
+  const span = document.createElement('span');
+  span.className = 'product-name';
+  span.textContent = newName;
+  li.replaceChild(span, inputEl);
+}
+</script>
+
+</body>
+</html>

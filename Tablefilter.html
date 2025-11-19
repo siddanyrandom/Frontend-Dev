@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Table Filter</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    #noResults { display: none; margin-top: 10px; color: red; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Student Table Filter</h2>
+
+  <input type="text" id="search" placeholder="Search students..." />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>CGPA</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr><td>Amit Sharma</td><td>CSE</td><td>8.2</td></tr>
+      <tr><td>Riya Verma</td><td>ECE</td><td>8.9</td></tr>
+      <tr><td>Kunal Singh</td><td>ME</td><td>7.4</td></tr>
+      <tr><td>Priya Mishra</td><td>CSE</td><td>9.1</td></tr>
+      <tr><td>Rahul Jain</td><td>IT</td><td>8.0</td></tr>
+      <tr><td>Simran Kaur</td><td>CIVIL</td><td>7.8</td></tr>
+    </tbody>
+  </table>
+
+  <div id="noResults">No results found</div>
+
+  <script>
+    const search = document.getElementById('search');
+    const tableBody = document.getElementById('tableBody');
+    const noResults = document.getElementById('noResults');
+
+    search.addEventListener('input', () => {
+      const value = search.value.toLowerCase();
+      const rows = tableBody.querySelectorAll('tr');
+      let found = false;
+
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (text.includes(value)) {
+          row.style.display = '';
+          found = true;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      noResults.style.display = found ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
