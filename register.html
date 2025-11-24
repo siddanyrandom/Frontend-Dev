@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Registration Form Validation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    input { display: block; margin-bottom: 1rem; padding: .5rem; width: 250px; }
+    #success { color: green; font-weight: bold; display: none; margin-top: 1rem; }
+    button { padding: .5rem 1rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Registration Form</h1>
+</header>
+
+<main>
+
+  <section>
+    <input id="name" type="text" placeholder="Full Name">
+    <input id="email" type="text" placeholder="Email Address">
+    <input id="password" type="password" placeholder="Password (min 8 chars)">
+    <button id="submit">Register</button>
+
+    <p id="success">Registration Successful!</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Form Validation Demo</p>
+</footer>
+
+<script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Special Offer Banner</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    .banner-container { width: 300px; }
+    .banner { padding: 1rem; margin-bottom: 1rem; border-radius: 6px; color: white; display: none; }
+    .b1 { background: #ff4d4d; }
+    .b2 { background: #4d94ff; }
+    .b3 { background: #4dff88; }
+    button { margin-right: 1rem; padding: .5rem 1rem; margin-bottom: .5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Special Offer Banners</h1>
+</header>
+
+<main>
+  <section>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="slide">Slide Up/Down</button>
+    <button id="fade">Fade In/Out</button>
+  </section>
+
+  <section class="banner-container">
+    <div class="banner b1">50% OFF on all Electronics!</div>
+    <div class="banner b2">Buy 1 Get 1 Free on Shoes!</div>
+    <div class="banner b3">Special Cashback on Payments!</div>
+  </section>
+</main>
+
+<footer>
+  <p>Promotional Effects Demo</p>
+</footer>
+
+<script src="offer.js"></script>
+</body>
+</html>

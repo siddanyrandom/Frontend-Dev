@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Event Subscription Panel</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    .topic { padding: .7rem; border: 1px solid #ccc; border-radius: 6px; width: 220px; margin-bottom: .5rem; display: flex; justify-content: space-between; align-items: center; }
+    #success { margin-top: 1rem; font-weight: bold; color: green; display: none; }
+    #topics-container { margin-top: 1rem; }
+    button { padding: .4rem .8rem; }
+    #new-topic-input { padding: .4rem; margin-right: .5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Event Subscription Panel</h1>
+</header>
+
+<main>
+
+  <section>
+    <input id="new-topic-input" type="text" placeholder="New topic name">
+    <button id="add-topic">Add Topic</button>
+  </section>
+
+  <section id="topics-container">
+
+    <div class="topic">
+      <span>Technology</span>
+      <button class="subscribe-btn">Subscribe</button>
+    </div>
+
+    <div class="topic">
+      <span>Sports</span>
+      <button class="subscribe-btn">Subscribe</button>
+    </div>
+
+    <div class="topic">
+      <span>Music</span>
+      <button class="subscribe-btn">Subscribe</button>
+    </div>
+
+  </section>
+
+  <div id="success"></div>
+
+</main>
+
+<footer>
+  <p>Subscription Management Demo</p>
+</footer>
+
+<script src="subscription.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome Page Greeting</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    #greeting { font-size: 1.8rem; margin-bottom: 1rem; cursor: pointer; }
+    #welcome-box { padding: 1rem; background: #f0f0f0; margin-top: 1rem; border-radius: 6px; }
+    button { margin-right: 1rem; padding: .5rem 1rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome Page</h1>
+  </header>
+
+  <main>
+    <section>
+      <p id="greeting"></p>
+
+      <button id="change-greeting">Change Greeting</button>
+      <button id="toggle-message">Toggle Welcome Message</button>
+
+      <article id="welcome-box">
+        <p>We are glad to have you here! Enjoy exploring our website.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Dynamic Greeting Demo</p>
+  </footer>
+
+  <script src="welcome.js"></script>
+</body>
+</html>

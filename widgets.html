@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Multi-jQuery Widgets</title>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    var jQueryV1 = jQuery.noConflict(true);
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    var jQueryV2 = jQuery.noConflict(true);
+  </script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    #carousel { width: 300px; height: 150px; background: #ddd; display: flex; justify-content: center; align-items: center; margin-bottom: 1rem; }
+    .widget { padding: 1rem; border: 1px solid #ccc; margin-bottom: .5rem; cursor: pointer; }
+    .active-widget { background: #e0f7ff; }
+    #modal { display: none; position: fixed; top: 30%; left: 50%; transform: translateX(-50%); background: white; padding: 1rem; border: 1px solid #000; }
+    #tooltip { position: absolute; display: none; padding: .3rem .6rem; background: #333; color: white; font-size: .8rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Multi-jQuery Widgets</h1>
+</header>
+
+<main>
+
+  <div id="carousel">Slide 1</div>
+
+  <div class="widget" data-id="1">Analytics Widget</div>
+  <div class="widget" data-id="2">Reports Widget</div>
+  <div class="widget" data-id="3">User Stats Widget</div>
+
+  <button id="open-modal">Open Notification</button>
+
+  <div id="modal">
+    <p>New Notification!</p>
+    <button id="close-modal">Close</button>
+  </div>
+
+  <div id="tooltip"></div>
+
+</main>
+
+<footer>
+  <p>Dashboard with Multiple jQuery Versions</p>
+</footer>
+
+<script src="widgets.js"></script>
+</body>
+</html>

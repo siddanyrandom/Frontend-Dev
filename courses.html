@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Search Courses</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    #search { padding: .5rem; width: 250px; }
+    .course { padding: .7rem; border: 1px solid #ccc; border-radius: 6px; margin-bottom: .5rem; }
+    .highlight { background: yellow; }
+    #count { margin-top: 1rem; font-weight: bold; }
+    button { padding: .4rem .8rem; margin-left: .5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Search Courses</h1>
+</header>
+
+<main>
+
+  <input id="search" type="text" placeholder="Search courses">
+  <button id="clear">Clear</button>
+
+  <section id="courses-list">
+
+    <div class="course">Web Development Bootcamp</div>
+    <div class="course">Data Structures and Algorithms</div>
+    <div class="course">Machine Learning with Python</div>
+    <div class="course">Introduction to Cloud Computing</div>
+    <div class="course">Cybersecurity Essentials</div>
+    <div class="course">Advanced Java Programming</div>
+
+  </section>
+
+  <div id="count"></div>
+
+</main>
+
+<footer>
+  <p>Course Search Filter Demo</p>
+</footer>
+
+<script src="courses.js"></script>
+</body>
+</html>

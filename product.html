@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Product Highlight</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    .product-list { display: flex; gap: 1rem; }
+    .product { padding: 1rem; border: 1px solid #ccc; border-radius: 6px; width: 180px; position: relative; cursor: pointer; }
+    .highlight { background: #e0f7ff; }
+    .favorite { position: absolute; top: 10px; right: 10px; font-size: 20px; cursor: pointer; }
+    .selected { color: red; }
+    .details { display: none; font-size: .9rem; margin-top: .5rem; }
+    .product[discount="true"] { border-color: green; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Product Highlight</h1>
+</header>
+
+<main>
+  <section class="product-list">
+
+    <div class="product" data-stock="in" discount="true">
+      <div class="favorite">♥</div>
+      <h3>Wireless Mouse</h3>
+      <p>₹499</p>
+      <div class="details">Ergonomic design, 1-year warranty</div>
+    </div>
+
+    <div class="product" data-stock="out">
+      <div class="favorite">♥</div>
+      <h3>Bluetooth Speaker</h3>
+      <p>₹1299</p>
+      <div class="details">10-hour battery, waterproof</div>
+    </div>
+
+    <div class="product" data-stock="in" discount="true">
+      <div class="favorite">♥</div>
+      <h3>Smart Watch</h3>
+      <p>₹2499</p>
+      <div class="details">Heart-rate monitor, sleep tracking</div>
+    </div>
+
+    <div class="product" data-stock="in">
+      <div class="favorite">♥</div>
+      <h3>Keyboard</h3>
+      <p>₹799</p>
+      <div class="details">Silent typing, USB connection</div>
+    </div>
+
+    <div class="product" data-stock="out">
+      <div class="favorite">♥</div>
+      <h3>Headphones</h3>
+      <p>₹1599</p>
+      <div class="details">Noise cancellation, foldable</div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <p>E-commerce UX Demo</p>
+</footer>
+
+<script src="product.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Team Members Directory</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    .department { border: 2px solid #ccc; margin-bottom: 1rem; padding: 1rem; border-radius: 6px; cursor: pointer; }
+    .manager { font-size: 1.2rem; font-weight: bold; cursor: pointer; }
+    .employee { margin-left: 1.5rem; cursor: pointer; }
+    .contact { display: none; font-size: .9rem; margin-left: 2.2rem; color: #555; }
+    .highlight { background: #e0f7ff; }
+    .sibling-highlight { background: #ffe8b3; }
+    button { margin-bottom: 1rem; padding: .5rem 1rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Team Members Directory</h1>
+</header>
+
+<main>
+
+  <button id="random">Highlight Siblings of Random Employee</button>
+
+  <section id="teams">
+
+    <div class="department" data-dept="tech">
+      <h2>Technology Department</h2>
+      <div class="manager">Amit (Manager)</div>
+      <div class="employee">Rohit</div>
+      <div class="contact">rohit@example.com</div>
+
+      <div class="employee">Sneha</div>
+      <div class="contact">sneha@example.com</div>
+
+      <div class="employee">Vikas</div>
+      <div class="contact">vikas@example.com</div>
+    </div>
+
+    <div class="department" data-dept="hr">
+      <h2>Human Resources</h2>
+      <div class="manager">Priya (Manager)</div>
+      <div class="employee">Kiran</div>
+      <div class="contact">kiran@example.com</div>
+
+      <div class="employee">Megha</div>
+      <div class="contact">megha@example.com</div>
+    </div>
+
+    <div class="department" data-dept="sales">
+      <h2>Sales Department</h2>
+      <div class="manager">Ravi (Manager)</div>
+      <div class="employee">Tarun</div>
+      <div class="contact">tarun@example.com</div>
+
+      <div class="employee">Divya</div>
+      <div class="contact">divya@example.com</div>
+
+      <div class="employee">Neeraj</div>
+      <div class="contact">neeraj@example.com</div>
+    </div>
+
+  </section>
+
+  <button id="toggle-teams">Collapse/Expand Teams</button>
+
+</main>
+
+<footer>
+  <p>Team Directory Interaction Demo</p>
+</footer>
+
+<script src="team.js"></script>
+</body>
+</html>

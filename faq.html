@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Interactive FAQ</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    .faq-item { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; border-radius: 6px; }
+    .question { font-size: 1.2rem; cursor: pointer; }
+    .question:hover { color: blue; }
+    .answer { display: none; margin-top: .5rem; }
+    .highlight { background: #f3faff; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Interactive FAQ</h1>
+</header>
+
+<main>
+  <section class="faq-list">
+
+    <div class="faq-item">
+      <div class="question">What is your return policy?</div>
+      <div class="answer">
+        <p>You can return products within 7 days.</p>
+        <input type="text" placeholder="Type here...">
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Do you offer free shipping?</div>
+      <div class="answer">
+        <p>Free shipping is available on orders above ₹999.</p>
+        <input type="text" placeholder="Type here...">
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">How can I track my order?</div>
+      <div class="answer">
+        <p>You can track your order from your profile.</p>
+        <input type="text" placeholder="Type here...">
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">What payment methods are accepted?</div>
+      <div class="answer">
+        <p>We accept UPI, Cards, Net Banking, and Wallets.</p>
+        <input type="text" placeholder="Type here...">
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Is customer support available?</div>
+      <div class="answer">
+        <p>Support is available 24/7.</p>
+        <input type="text" placeholder="Type here...">
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<footer>
+  <p>FAQ Interaction Demo</p>
+</footer>
+
+<script src="faq.js"></script>
+</body>
+</html>

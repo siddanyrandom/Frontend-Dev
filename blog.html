@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dynamic Blog Posts</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    #controls button { padding: .5rem 1rem; margin-right: .5rem; }
+    .post { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; border-radius: 6px; position: relative; }
+    .tag { background: #f0f0f0; padding: .2rem .5rem; margin-right: .3rem; border-radius: 4px; display: inline-block; }
+    .highlight { background: #fff8b3; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dynamic Blog Posts</h1>
+</header>
+
+<main>
+
+  <section id="controls">
+    <button id="add">Add New Post</button>
+    <button id="prepend">Prepend Featured Post</button>
+    <button id="remove-last">Remove Last Post</button>
+    <input id="keyword" type="text" placeholder="Keyword highlight">
+    <button id="apply-keyword">Highlight</button>
+  </section>
+
+  <section id="post-list">
+
+    <div class="post">
+      <h3>Learning JavaScript</h3>
+      <p>JavaScript is essential for interactive websites.</p>
+    </div>
+
+    <div class="post">
+      <h3>CSS Tips and Tricks</h3>
+      <p>Enhance your UI using flexible layout techniques.</p>
+    </div>
+
+    <div class="post">
+      <h3>Mastering Python</h3>
+      <p>Python is powerful for automation and data science.</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>Blog Management Demo</p>
+</footer>
+
+<script src="blog.js"></script>
+</body>
+</html>
