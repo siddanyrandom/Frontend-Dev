@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Timetable Viewer</title>
+    <link rel="stylesheet" href="college-timetable.css">
+</head>
+
+<body>
+
+    <h2>College Timetable Viewer</h2>
+
+    <label for="daySelect">Select Day:</label>
+    <select id="daySelect">
+        <option value="">-- Select Day --</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+    </select>
+
+    <div id="loading" class="loading" style="display:none;">Loading...</div>
+    <p id="noClassMsg" class="no-class"></p>
+
+    <div id="timetableContainer"></div>
+
+    <script src="college-timetable.js"></script>
+</body>
+</html>

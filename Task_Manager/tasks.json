@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    { "id": 1, "title": "Finish assignment", "priority": "high", "completed": false },
+    { "id": 2, "title": "Buy groceries", "priority": "low", "completed": true },
+    { "id": 3, "title": "Read chapter 4", "priority": "medium", "completed": false },
+    { "id": 4, "title": "Fix bug #102", "priority": "high", "completed": false },
+    { "id": 5, "title": "Plan weekend trip", "priority": "medium", "completed": true },
+    { "id": 6, "title": "Gym workout", "priority": "low", "completed": false }
+  ]
+}

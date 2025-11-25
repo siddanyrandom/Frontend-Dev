@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager With Filters</title>
+
+    <link rel="stylesheet" href="task-manager.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="task-manager.js" defer></script>
+</head>
+
+<body>
+
+    <h2>Task Manager (jQuery AJAX + Filters)</h2>
+
+    <label for="filterSelect">Filter Tasks:</label>
+    <select id="filterSelect">
+        <option value="">All Tasks</option>
+        <option value="low">Low Priority</option>
+        <option value="medium">Medium Priority</option>
+        <option value="high">High Priority</option>
+        <option value="completed">Completed</option>
+    </select>
+
+    <div id="loading" style="display:none;">Loading...</div>
+    <p id="error" class="error"></p>
+
+    <ul id="taskList"></ul>
+
+</body>
+</html>

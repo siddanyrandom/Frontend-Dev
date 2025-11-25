@@ -1,0 +1,22 @@
+{
+  "users": [
+    { "id": 1, "name": "Aditi" },
+    { "id": 2, "name": "Rohan" },
+    { "id": 3, "name": "Sneha" }
+  ],
+
+  "orders": [
+    { "id": 101, "amount": 1200 },
+    { "id": 102, "amount": 460 },
+    { "id": 103, "amount": 980 },
+    { "id": 104, "amount": 299 }
+  ],
+
+  "products": [
+    { "id": 501, "title": "Laptop" },
+    { "id": 502, "title": "Keyboard" },
+    { "id": 503, "title": "Phone" },
+    { "id": 504, "title": "Charger" },
+    { "id": 505, "title": "Headphones" }
+  ]
+}

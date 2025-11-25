@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background: #f4f6f9;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#daySelect {
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+
+.subject {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.faculty, .time {
+    margin-top: 5px;
+    color: #555;
+}
+
+.no-class {
+    margin-top: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+.loading {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #444;
+}
